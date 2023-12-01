@@ -94,3 +94,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'jsonapi-serializer', '~> 2.2'
+
+gem 'simplecov', require: false, group: :test
