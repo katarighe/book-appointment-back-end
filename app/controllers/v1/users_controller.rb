@@ -11,7 +11,7 @@ class V1::UsersController < ApplicationController
       if Password.new(@user.encrypted_password) == params[:password]
         token = JsonWebToken.encode(user_id: @user.id)
         time = Time.now + 24.hours.to_i
-        render json: { token: token, exp: time.strftime('%m-%d-%Y %H:%M'),
+        render json: { token:, exp: time.strftime('%m-%d-%Y %H:%M'),
                        user_details: @user }, status: :ok
       else
         render json: { error: 'unauthorized', error_message: ['invalid password'] }, status: :unauthorized
@@ -26,7 +26,7 @@ class V1::UsersController < ApplicationController
     if @user.save
       token = JsonWebToken.encode(user_id: @user.id)
       time = Time.now + 24.hours.to_i
-      render json: { token: token, exp: time.strftime('%m-%d-%Y %H:%M'),
+      render json: { token:, exp: time.strftime('%m-%d-%Y %H:%M'),
                      user_details: @user }, status: :ok
     else
       render json: { error: 'unauthorized', error_message: @user.errors }, status: :unauthorized
