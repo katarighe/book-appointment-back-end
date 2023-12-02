@@ -1,6 +1,5 @@
 require 'swagger_helper'
 
-# rubocop:disable Metrics/BlockLength
 RSpec.describe 'v1/users', type: :request do
   path '/v1/users/signup' do
     post 'Creates a user' do
@@ -54,4 +53,3 @@ RSpec.describe 'v1/users', type: :request do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength
