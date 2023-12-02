@@ -11,11 +11,12 @@ class V1::UsersController < ApplicationController
       if Password.new(@user.encrypted_password) == params[:password]
         token = JsonWebToken.encode(user_id: @user.id)
         time = Time.now + 24.hours.to_f
-        render json: { token: token,
+        render json: { token:,
                        exp: time,
                        user_details: UserSerializer.new(@user).serializable_hash[:data][:attributes] }, status: :ok
       else
-        render json: { error: 'unauthorized', error_message: ['The password you entered is not valid'] }, status: :unauthorized
+        render json: { error: 'unauthorized', error_message: ['The password you entered is not valid'] },
+               status: :unauthorized
       end
     else
       render json: { error: 'unauthorized', error_message: ['The selected user does not exist'] }, status: :unauthorized
@@ -27,7 +28,7 @@ class V1::UsersController < ApplicationController
     if @user.save
       token = JsonWebToken.encode(user_id: @user.id)
       time = Time.now + 24.hours.to_f
-      render json: { token: token,
+      render json: { token:,
                      exp: time,
                      user_details: UserSerializer.new(@user).serializable_hash[:data][:attributes] }, status: :ok
     else
