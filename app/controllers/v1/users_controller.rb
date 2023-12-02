@@ -15,10 +15,10 @@ class V1::UsersController < ApplicationController
                        exp: time,
                        user_details: UserSerializer.new(@user).serializable_hash[:data][:attributes] }, status: :ok
       else
-        render json: { error: 'unauthorized', error_message: ['invalid password'] }, status: :unauthorized
+        render json: { error: 'unauthorized', error_message: ['The password you entered is not valid'] }, status: :unauthorized
       end
     else
-      render json: { error: 'unauthorized', error_message: ['User does not exist'] }, status: :unauthorized
+      render json: { error: 'unauthorized', error_message: ['The selected user does not exist'] }, status: :unauthorized
     end
   end
 
