@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     post 'users/login' => 'users#login'
     post 'users/signup' => 'users#signup'
     get 'users/fetch_current_user' => 'users#fetch_current_user'
-    resources :doctors, only: %i[create destroy show index]
-    resources :appointments, only: %i[create show destroy index]
+    resources :doctors, only: [:create, :destroy, :show, :index]
+    resources :appointments, only: [:create, :show, :destroy, :index]
   end
 end

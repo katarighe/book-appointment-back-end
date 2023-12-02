@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  include RecordNotFound
+  ActiveRecord::RecordNotFound
 
   before_action :update_allowed_parameters, if: :devise_controller?
 
