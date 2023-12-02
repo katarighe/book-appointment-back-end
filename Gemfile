@@ -98,7 +98,3 @@ end
 gem 'jsonapi-serializer', '~> 2.2'
 
 gem 'simplecov', require: false, group: :test
-
-gem 'shoulda-matchers', '~> 5.0'
-
-gem 'rspec-rails-swagger'
