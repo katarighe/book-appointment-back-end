@@ -47,7 +47,7 @@ RSpec.describe 'v1/users/signup', type: :request do
       it 'return message error' do
         post v1_users_signup_path, params: { name: 'test', email: 'test@test.com', password: '' }
         body = response.parsed_body
-        expect(body['error']).to eq('unauthorized')
+        expect(body['error']).to eq('forbidden')
         expect(body['error_message']['password']).to eq(['can\'t be blank', 'is too short (minimum is 6 characters)'])
       end
     end
