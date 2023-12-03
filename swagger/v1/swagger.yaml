@@ -1,0 +1,115 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/v1/doctors/{id}":
+    get:
+      summary: Retrieves a doctor
+      tags:
+      - Doctors
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: name found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  city:
+                    type: string
+                  specialization:
+                    type: string
+                  cost_per_day:
+                    type: integer
+                  description:
+                    type: string
+                required:
+                - id
+                - name
+                - city
+                - specialization
+                - cost_per_day
+                - description
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  city:
+                    type: string
+                  specialization:
+                    type: string
+                  cost_per_day:
+                    type: integer
+                  description:
+                    type: string
+                required:
+                - id
+                - name
+                - city
+                - specialization
+                - cost_per_day
+                - description
+        '404':
+          description: doctor not found
+  "/v1/users/signup":
+    post:
+      summary: Creates a user
+      tags:
+      - Users
+      parameters: []
+      responses:
+        '200':
+          description: user created
+        '401':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+              - name
+              - email
+              - password
+          application/xml:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+              - name
+              - email
+              - password
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
