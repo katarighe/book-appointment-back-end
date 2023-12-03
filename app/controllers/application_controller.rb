@@ -1,4 +1,3 @@
-# rubocop:disable Lint/DuplicateBranch
 class ApplicationController < ActionController::API
   include ActionController::MimeResponds
   include ActionController::ImplicitRender
@@ -13,6 +12,7 @@ class ApplicationController < ActionController::API
     render json: { error: 'not_found' }, status: :not_found
   end
 
+  # rubocop:disable Lint/DuplicateBranch
   def authorize_request
     header = request.headers['Authorization']
     header = header.split.last if header
@@ -26,6 +26,7 @@ class ApplicationController < ActionController::API
 
   protected
 
+  # rubocop:enable Lint/DuplicateBranch
   def update_allowed_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name photo password password_confirmation email])
   end
