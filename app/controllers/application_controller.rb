@@ -1,3 +1,4 @@
+# rubocop:disable Lint/DuplicateBranch
 class ApplicationController < ActionController::API
   include ActionController::MimeResponds
   include ActionController::ImplicitRender
@@ -26,8 +27,7 @@ class ApplicationController < ActionController::API
   protected
 
   def update_allowed_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :photo, :password, :password_confirmation, :email])
-    # devise_parameter_sanitizer.permit(:account_update, keys: [:Name, :Bio, :Photo, :password, :password_confirmation, :email, :current_password])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name photo password password_confirmation email])
   end
 
   def render_unauthorized(message)
