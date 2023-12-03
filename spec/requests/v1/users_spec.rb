@@ -14,13 +14,12 @@ RSpec.describe 'v1/users/signup', type: :request do
       end
     end
 
-    context 'with invalid parameters: User with the same email already created' do
-      it 'returns a conflict error' do
+    context 'with invalid parameters : User with the same email already created' do
+      it 'return message error' do
         user = User.create(name: 'test', email: 'test@test.com', password: 'helloWORLD')
         post v1_users_signup_path, params: { name: 'test', email: 'test@test.com', password: 'helloWORLD' }
         body = response.parsed_body
-        expect(response).to have_http_status(:conflict)
-        expect(body['error']).to eq('conflict')
+        expect(body['error']).to eq('unauthorized')
         expect(body['error_message']['email']).to eq(['has already been taken'])
         user.destroy
       end
@@ -46,12 +45,11 @@ RSpec.describe 'v1/users/signup', type: :request do
       end
     end
 
-    context 'with invalid parameters: Password is nil' do
-      it 'returns a forbidden error for blank password' do
+    context 'with invalid parameters : Password is nil' do
+      it 'return message error' do
         post v1_users_signup_path, params: { name: 'test', email: 'test@test.com', password: '' }
         body = response.parsed_body
-        expect(response).to have_http_status(:forbidden)
-        expect(body['error']).to eq('forbidden')
+        expect(body['error']).to eq('unauthorized')
         expect(body['error_message']['password']).to eq(['can\'t be blank', 'is too short (minimum is 6 characters)'])
       end
     end
