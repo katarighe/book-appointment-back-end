@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   # relationships
-  # has_one_attached :image, dependent: :destroy
-  # has_many :appointments, dependent: :destroy
+  has_one_attached :image, dependent: :destroy
+  has_many :appointments, dependent: :destroy
 
   # validations
   validates :name, presence: true, length: { in: 3..150 }
