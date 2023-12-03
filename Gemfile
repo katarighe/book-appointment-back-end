@@ -99,4 +99,4 @@ gem 'jsonapi-serializer', '~> 2.2'
 
 gem 'simplecov', require: false, group: :test
 
-gem 'shoulda-matchers'
+gem 'shoulda-matchers', '~> 5.3.0'
