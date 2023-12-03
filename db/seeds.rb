@@ -23,6 +23,6 @@ doctor1.image.attach(io: File.open("#{Rails.root}/public/doctors/doctor1.jpg"), 
 doctor2.image.attach(io: File.open("#{Rails.root}/public/doctors/doctor2.jpg"), filename: 'doctor2.jpg', content_type: 'image/jpg')
 doctor3.image.attach(io: File.open("#{Rails.root}/public/doctors/doctor3.jpg"), filename: 'doctor3.jpg', content_type: 'image/jpg')
 
-apointment1 = Appointment.create!(doctor_id: doctor1.id, user_id: view_user1.id, date_of_appointment: Time.now)
-apointment2 = Appointment.create!(doctor_id: doctor2.id, user_id: view_user1.id, date_of_appointment: Time.now)
-apointment3 = Appointment.create!(doctor_id: doctor3.id, user_id: view_user1.id, date_of_appointment: Time.now)
+appointment1 = Appointment.create!(doctor_id: doctor1.id, user_id: view_user1.id, date_of_appointment: Time.now)
+appointment2 = Appointment.create!(doctor_id: doctor2.id, user_id: view_user1.id, date_of_appointment: Time.now)
+appointment3 = Appointment.create!(doctor_id: doctor3.id, user_id: view_user1.id, date_of_appointment: Time.now)
