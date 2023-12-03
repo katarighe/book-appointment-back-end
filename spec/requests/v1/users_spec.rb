@@ -19,8 +19,8 @@ RSpec.describe 'v1/users/signup', type: :request do
         user = User.create(name: 'test', email: 'test@test.com', password: 'helloWORLD')
         post v1_users_signup_path, params: { name: 'test', email: 'test@test.com', password: 'helloWORLD' }
         body = response.parsed_body
-        expect(response).to have_http_status(:conflict) # Adjusted to conflict status for duplicate email
-        expect(body['error']).to eq('conflict') # Updated to 'conflict' to match the status
+        expect(response).to have_http_status(:conflict)
+        expect(body['error']).to eq('conflict')
         expect(body['error_message']['email']).to eq(['has already been taken'])
         user.destroy
       end
