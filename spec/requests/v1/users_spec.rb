@@ -19,8 +19,8 @@ RSpec.describe 'v1/users/signup', type: :request do
         user = User.create(name: 'test', email: 'test@test.com', password: 'helloWORLD')
         post v1_users_signup_path, params: { name: 'test', email: 'test@test.com', password: 'helloWORLD' }
         body = response.parsed_body
-        expect(response).to have_http_status(:conflict)  # Adjusted to conflict status for duplicate email
-        expect(body['error']).to eq('conflict')          # Updated to 'conflict' to match the status
+        expect(response).to have_http_status(:conflict) # Adjusted to conflict status for duplicate email
+        expect(body['error']).to eq('conflict') # Updated to 'conflict' to match the status
         expect(body['error_message']['email']).to eq(['has already been taken'])
         user.destroy
       end
@@ -64,8 +64,8 @@ RSpec.describe 'v1/users/signup', type: :request do
         expect(body['token']).to_not be nil
         expect(body['exp']).to_not be nil
         expect(body['user_details']).to_not be nil
-        expect(body['user_details']['email']).
-        to eq('test@test.com')
+        expect(body['user_details']['email'])
+          .to eq('test@test.com')
         expect(body['user_details']['name']).to eq('test')
         expect(body['user_details']['confirm_password']).to be nil
       end
