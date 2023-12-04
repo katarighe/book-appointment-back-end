@@ -44,7 +44,6 @@ class V1::DoctorsController < ApplicationController
 
   def destroy; end
 
-
   private
 
   def doctor_params
