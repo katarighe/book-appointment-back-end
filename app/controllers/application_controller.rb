@@ -1,37 +1,19 @@
+# rubocop:disable all
 class ApplicationController < ActionController::API
-  include ActionController::MimeResponds
-  include ActionController::ImplicitRender
-  include ActionController::RequestForgeryProtection
-  protect_from_forgery with: :exception
-
-  rescue_from ActiveRecord::RecordNotFound, with: :not_found
+  include RecordNotFound
 
   before_action :update_allowed_parameters, if: :devise_controller?
 
-  def not_found
-    render json: { error: 'not_found' }, status: :not_found
-  end
-
-  # rubocop:disable Lint/DuplicateBranch
   def authorize_request
     header = request.headers['Authorization']
     header = header.split.last if header
-    @decoded = JsonWebToken.decode(header)
-    @current_user = User.find(@decoded[:user_id])
-  rescue ActiveRecord::RecordNotFound => e
-    render_unauthorized(e.message)
-  rescue JWT::DecodeError => e
-    render_unauthorized(e.message)
-  end
-
-  protected
-
-  # rubocop:enable Lint/DuplicateBranch
-  def update_allowed_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name photo password password_confirmation email])
-  end
-
-  def render_unauthorized(message)
-    render json: { errors: message }, status: :unauthorized
+    begin
+      @decoded = JsonWebToken.decode(header)
+      @current_user = User.find(@decoded[:user_id])
+    rescue ActiveRecord::RecordNotFound => e
+      render json: { errors: e.message }, status: :unauthorized
+    rescue JWT::DecodeError => e
+      render json: { errors: e.message }, status: :unauthorized
+    end
   end
 end
