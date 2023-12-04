@@ -85,3 +85,4 @@ production:
   database: appointment_production
   username: postgres
   password: <%= ENV['DATABASE_PASSWORD'] %>
+  
