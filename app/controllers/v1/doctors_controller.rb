@@ -42,9 +42,8 @@ class V1::DoctorsController < ApplicationController
     end
   end
 
-  def destroy
-  end
-  
+  def destroy; end
+
 
   private
 
