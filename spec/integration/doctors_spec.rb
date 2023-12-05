@@ -1,4 +1,5 @@
 require 'swagger_helper'
+require_relative '../support/request_spec_helper'
 
 RSpec.describe 'v1/doctors', type: :request do
   include RequestSpecHelper
