@@ -1,4 +1,5 @@
 require 'rails_helper'
+require_relative '../../support/request_spec_helper'
 
 RSpec.describe 'V1::Doctors', type: :request do
   include RequestSpecHelper
