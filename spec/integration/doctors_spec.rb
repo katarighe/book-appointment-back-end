@@ -1,6 +1,7 @@
 require 'swagger_helper'
 
 RSpec.describe 'v1/doctors', type: :request do
+  include RequestSpecHelper
   let(:access_token) { confirm_and_login_user }
   let(:Authorization) { "Bearer #{access_token}" }
 

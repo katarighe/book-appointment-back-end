@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'V1::Doctors', type: :request do
+  include RequestSpecHelper
   let(:access_token) { confirm_and_login_user }
 
   describe 'GET /index' do
