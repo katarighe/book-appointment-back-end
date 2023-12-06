@@ -1,8 +1,11 @@
 # rubocop:disable all
 class ApplicationController < ActionController::API
-  include RecordNotFound
-
+  
   before_action :update_allowed_parameters, if: :devise_controller?
+
+  def not_found
+    render json: { error: 'not_found' }
+  end
 
   def authorize_request
     header = request.headers['Authorization']
@@ -14,6 +17,14 @@ class ApplicationController < ActionController::API
       render json: { errors: e.message }, status: :unauthorized
     rescue JWT::DecodeError => e
       render json: { errors: e.message }, status: :unauthorized
+    end
+  end
+
+  protected
+
+  def update_allowed_parameters
+    devise_parameter_sanitizer.permit(:sign_up) do |u|
+      u.permit(:name, :photo, :password, :password_confirmation, :email)
     end
   end
 end
