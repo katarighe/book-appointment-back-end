@@ -1,7 +1,6 @@
 # rubocop:disable all
 class ApplicationController < ActionController::API
-  include RecordNotFound
-
+  
   before_action :update_allowed_parameters, if: :devise_controller?
 
   def not_found
