@@ -1,4 +1,5 @@
 # rubocop:disable Metrics/BlockLength
+# rubocop:disable Layout/EmptyLines
 require 'swagger_helper'
 
 RSpec.describe 'v1/appointments', type: :request do
@@ -110,3 +111,4 @@ RSpec.describe 'v1/appointments', type: :request do
   end
 end
 # rubocop:enable Metrics/BlockLength
+# rubocop:disable Layout/EmptyLines
