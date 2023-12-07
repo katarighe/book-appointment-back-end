@@ -1,8 +1,9 @@
+# rubocop:disable Metrics/BlockLength
 require 'swagger_helper'
-require_relative '../support/request_spec_helper'
 
 RSpec.describe 'v1/doctors', type: :request do
   include RequestSpecHelper
+
   let(:access_token) { confirm_and_login_user }
   let(:Authorization) { "Bearer #{access_token}" }
 
@@ -45,78 +46,91 @@ RSpec.describe 'v1/doctors', type: :request do
         end
       end
     end
-  end
 
-  path '/v1/doctors' do
-    post 'Creates a docotor' do
-      tags 'Doctors'
-      consumes 'application/json', 'application/xml'
-      security [Bearer: {}]
-      parameter name: :Authorization, in: :header, type: :string
-      parameter name: :doctor, in: :body, schema: {
-        type: :object,
-        properties: {
-          name: { type: :string },
-          specialization: { type: :string },
-          city: { type: :string },
-          cost_per_day: { type: :integer },
-          description: { type: :string },
-          image_url: { type: :string }
-        },
-        required: %w[name specialization city cost_per_day description]
-      }
+    path '/v1/doctors' do
+      post 'Creates a doctor' do
+        tags 'Doctors'
+        consumes 'application/json', 'application/xml'
+        security [Bearer: {}]
+        parameter name: :Authorization, in: :header, type: :string
+        parameter name: :doctor, in: :body, schema: {
+          type: :object,
+          properties: {
+            name: { type: :string },
+            specialization: { type: :string },
+            city: { type: :string },
+            cost_per_day: { type: :integer },
+            description: { type: :string },
+            image_url: { type: :string }
+          },
+          required: %w[name specialization city cost_per_day description]
+        }
 
-      response '201', 'doctor created' do
-        let(:doctor) do
-          { name: 'docy', city: 'Struga', specialization: 'urology', cost_per_day: 24, description: 'description' }
+        response '201', 'doctor created' do
+          let(:doctor) do
+            { name: 'docy', city: 'Struga', specialization: 'urology', cost_per_day: 24, description: 'description' }
+          end
+          schema type: :object,
+                 properties: {
+
+                   id: { type: :integer },
+                   name: { type: :string },
+                   city: { type: :string },
+                   specialization: { type: :string },
+                   costPerDay: { type: :integer },
+                   imageUrl: { type: :string, nullable: true },
+                   description: { type: :string }
+                 }
+
+          run_test!
         end
-        run_test!
-      end
 
-      response '422', 'invalid request' do
-        let(:doctor) { { name: 'foo' } }
-        run_test!
-      end
-    end
-  end
-
-  path '/v1/doctors' do
-    get 'Get all doctors' do
-      tags 'All doctors'
-      consumes 'application/json', 'application/xml'
-      security [Bearer: {}]
-      parameter name: :Authorization, in: :header, type: :string
-
-      response '200', 'All doctors fetched' do
-        schema type: :object,
-               properties: {
-                 message: { type: :array },
-                 data: { type: :array,
-                         properties: {
-                           id: { type: :integer },
-                           name: { type: :string },
-                           city: { type: :string },
-                           specialization: { type: :string },
-                           costPerDay: { type: :integer },
-                           imageUrl: { type: :string },
-                           description: { type: :string }
-                         } }
-
-               }
-        run_test! do |response|
-          json = JSON.parse(response.body)
-          expect(json['data'].length).to be >= 2
-          expect(json['message']).to eq(['All doctors loaded'])
+        response '422', 'invalid request' do
+          let(:doctor) { { name: 'foo' } }
+          run_test!
         end
       end
+      get 'Get all doctors' do
+        tags 'Doctors'
+        consumes 'application/json', 'application/xml'
+        security [Bearer: {}]
+        parameter name: :Authorization, in: :header, type: :string
 
-      response '201', 'No doctors found' do
-        schema type: :object,
-               properties: {
-                 error: { type: :string },
-                 error_message: { type: :array }
-               }
+        response '200', 'All doctors fetched' do
+          schema type: :object,
+                 properties: {
+                   message: { type: :array,
+                              items: { type: :string } },
+                   data: { type: :array,
+                           items: { type: :object,
+                                    properties: {
+                                      id: { type: :string },
+                                      name: { type: :string },
+                                      city: { type: :string },
+                                      specialization: { type: :string },
+                                      costPerDay: { type: :integer },
+                                      imageUrl: { type: :string, nullable: true },
+                                      description: { type: :string }
+                                    } } }
+
+                 }
+          run_test! do |response|
+            json = JSON.parse(response.body)
+            expect(json['data'].length).to be >= 2
+            expect(json['message']).to eq(['All doctors loaded'])
+          end
+        end
+
+        response '404', 'No doctors found' do
+          schema type: :object,
+                 properties: {
+                   error: { type: :string },
+                   error_message: { type: :array,
+                                    items: { type: :string } }
+                 }
+        end
       end
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
