@@ -55,7 +55,7 @@ RSpec.describe 'V1::Appointments', type: :request do
   end
 
   describe 'DELETE v1/appointments/:id' do
-    it 'delete appointment' do
+    it 'deletes the appointment' do
       appointment = Appointment.create(date_of_appointment: '2019-01-01', doctor_id: doctor.id, user_id: user.id)
       post '/v1/users/login', params: { email: user.email, password: user.password }
 
