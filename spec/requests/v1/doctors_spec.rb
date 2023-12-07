@@ -41,7 +41,8 @@ RSpec.describe 'V1::Doctors', type: :request do
 
   describe 'GET /doctors/:id' do
     before do
-      doctor1 = Doctor.create(name: 'Doctor 2', city: 'Skopje', specialization: 'nervs', cost_per_day: 30, description: 'neurologist')
+      doctor1 = Doctor.create(name: 'Doctor 2', city: 'Skopje', specialization: 'nervs', cost_per_day: 30,
+                              description: 'neurologist')
       get "/v1/doctors/#{doctor1.id}", headers: { 'Authorization' => "Bearer #{access_token}" }
     end
 
