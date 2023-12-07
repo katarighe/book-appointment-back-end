@@ -6,7 +6,7 @@ module RequestSpecHelper
   def confirm_and_login_user(user_role = 'admin')
     user = User.create(name: 'test', email: 'email@gmail.com', password: '123456', role: user_role)
     doctor = Doctor.create(name: 'Dr. John Doe', city: 'New York',
-                           specialization: 'Cardiology', cost_per_day: 100, description: 'Dr. John Doe is a cardiologist.')
+                           specialization: 'Cardiology', cost_per_day: 100, description: 'Dr. John Doe is a cardio')
     Appointment.create(date_of_appointment: '2000-09-07', doctor_id: doctor.id, user_id: user.id)
     post '/v1/users/login', params: { email: user.email, password: user.password }
     json['token']
@@ -29,7 +29,7 @@ module RequestSpecHelper
     user = User.create(name: 'test', email: 'emailtest2@gmail.com', password: '123456')
     post '/v1/users/login', params: { email: user.email, password: user.password }
     doctor = Doctor.create(name: 'Dr. John Doe', city: 'New York',
-                           specialization: 'Cardiology', cost_per_day: 100, description: 'Dr. John Doe is a cardiologist.')
+                           specialization: 'Cardiology', cost_per_day: 100, description: 'Dr. John Doe is a cardio')
     appointment = Appointment.create(date_of_appointment: '2000-09-07', doctor_id: doctor.id, user_id: user.id)
 
     { token: json['token'], id: appointment.id }
