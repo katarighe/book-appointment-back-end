@@ -1,5 +1,4 @@
 # rubocop:disable Metrics/BlockLength
-# rubocop:disable Layout/EmptyLines
 require 'swagger_helper'
 
 RSpec.describe 'v1/appointments', type: :request do
@@ -12,7 +11,6 @@ RSpec.describe 'v1/appointments', type: :request do
     Doctor.create(name: 'Dr. John Doe', city: 'New York',
                   specialization: 'Cardiology', cost_per_day: 100, description: 'Dr. John Doe is a cardiologist.')
   end
-
   path '/v1/appointments' do
     get('list appointments') do
       tags 'Appointments'
@@ -111,4 +109,3 @@ RSpec.describe 'v1/appointments', type: :request do
   end
 end
 # rubocop:enable Metrics/BlockLength
-# rubocop:disable Layout/EmptyLines
