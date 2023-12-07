@@ -54,7 +54,7 @@ RSpec.describe 'V1::Appointments', type: :request do
     User.create(name: 'test', email: 'emaildeletee1@gmail.com', password: '123456')
   end
 
-  
+
   describe 'POST v1/appointments' do
     it 'creates an appointment' do
       doctor.save

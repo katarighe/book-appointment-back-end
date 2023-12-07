@@ -10,7 +10,7 @@ RSpec.describe Appointment, type: :model do
       Doctor.create(name: 'Dr. John Doe', city: 'New York',
                     specialization: 'Cardiology', cost_per_day: 100, description: 'Dr. John Doe is a cardiologist.')
     end
-    subject { described_class.new(date_of_appointment: '2000-10-10', user: user, doctor: doctor) }
+    subject { described_class.new(date_of_appointment: '2000-10-10', user:, doctor:) }
 
     it 'is valid with valid attributes' do
       expect(subject).to be_valid
