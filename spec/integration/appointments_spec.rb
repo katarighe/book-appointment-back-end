@@ -46,21 +46,22 @@ RSpec.describe 'v1/appointments', type: :request do
 
         run_test!
       end
-
       response(404, 'No appointment') do
         schema type: :object,
                properties: {
                  message: { type: :array,
                             items: {
                               type: :string
+
                             } },
                  error: { type: :string }
                }
+
         let(:Authorization) { login_without_appointment }
+
         run_test!
       end
     end
-
     post('create appointment') do
       tags 'Appointments'
       consumes 'application/json'
