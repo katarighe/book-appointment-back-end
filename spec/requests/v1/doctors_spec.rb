@@ -76,5 +76,4 @@ RSpec.describe 'V1::Doctors', type: :request do
       expect(response).to have_http_status(:unauthorized)
     end
   end
-  end
 end
