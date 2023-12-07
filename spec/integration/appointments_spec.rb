@@ -53,7 +53,6 @@ RSpec.describe 'v1/appointments', type: :request do
                  message: { type: :array,
                             items: {
                               type: :string
-
                             } },
                  error: { type: :string }
                }
