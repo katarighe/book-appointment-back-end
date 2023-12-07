@@ -64,6 +64,25 @@ RSpec.describe 'V1::Doctors', type: :request do
       expect(response).to have_http_status(:created)
     end
 
+    describe 'DELETE v1/doctors/:id' do
+      before(:each) do
+        @doctor1 = Doctor.create(name: 'Doctor 2', city: 'Skopje', specialization: 'nervs', cost_per_day: 30,
+                                 description: 'heev ev ew v ewvewv')
+      end
+      it 'deletes a doctor with admin' do
+        delete "/v1/doctors/#{@doctor1.id}",
+               headers: { 'Authorization' => "Bearer #{access_token}" }
+        expect(response).to have_http_status(:ok)
+        expect(response.body).to include('Doctor deleted successfully')
+      end
+      it 'deletes a doctor without admin' do
+        delete "/v1/doctors/#{@doctor1.id}",
+               headers: { 'Authorization' => "Bearer #{user_access_token}" }
+        expect(response).to have_http_status(:unauthorized)
+        expect(response.body).to include('admin permission required')
+      end
+    end
+
     it 'not creates a doctor' do
       post '/v1/doctors', params: { doctor: {
         name: 'Doctor 2',
