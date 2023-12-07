@@ -56,9 +56,7 @@ RSpec.describe 'v1/appointments', type: :request do
                             } },
                  error: { type: :string }
                }
-
         let(:Authorization) { login_without_appointment }
-
         run_test!
       end
     end
