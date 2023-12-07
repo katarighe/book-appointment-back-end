@@ -38,11 +38,19 @@ class V1::DoctorsController < ApplicationController
         render json: @doctor.errors, status: :unprocessable_entity
       end
     else
-      render json: { error: 'unauthorized', error_message: 'you need admin permision' }, status: :unauthorized
+      render json: { error: 'unauthorized', error_message: 'admin permission required' }, status: :unauthorized
     end
   end
 
-  def destroy; end
+  def destroy
+    if @current_user.role == 'admin'
+      @doctor = Doctor.find(params[:id])
+      @doctor.destroy
+      render json: { message: 'Doctor deleted successfully' }, status: :ok
+    else
+      render json: { error: 'unauthorized', error_message: 'admin permission required' }, status: :unauthorized
+    end
+  end
 
   private
 
