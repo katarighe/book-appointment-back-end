@@ -76,11 +76,5 @@ RSpec.describe 'V1::Doctors', type: :request do
       expect(response).to have_http_status(:unauthorized)
     end
   end
-
-  describe 'DELETE v1/doctors/:id' do
-    before(:each) do
-      @doctor1 = Doctor.create(name: 'Doctor 2', city: 'Skopje', specialization: 'nervs', cost_per_day: 30, description: 'h
-      eev ev ew v ewvewv')
-    end
   end
 end
