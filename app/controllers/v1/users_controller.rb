@@ -3,6 +3,7 @@ require 'bcrypt'
 
 class V1::UsersController < ApplicationController
   include BCrypt
+  include AuthenticationConcern
   before_action :authorize_request, except: %i[login signup]
 
   def login
@@ -38,11 +39,5 @@ class V1::UsersController < ApplicationController
   def fetch_current_user
     @user = User.find(@current_user.id)
     render json: { data: UserSerializer.new(@user).serializable_hash[:data][:attributes] }, status: :ok
-  end
-
-  private
-
-  def signup_params
-    params.permit(:name, :email, :password, :password_confirmation, :image, :image_url)
   end
 end

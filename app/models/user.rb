@@ -11,7 +11,7 @@ class User < ApplicationRecord
   # validations
   validates :name, presence: true, length: { in: 3..150 }
   validates :password, presence: true, length: { in: 6..20 }
-
+  validates :role, inclusion: { in: %w[admin user], message: 'Invalid role' }
   def image_url
     Rails.application.routes.url_helpers.url_for(image) if image.attached?
   end

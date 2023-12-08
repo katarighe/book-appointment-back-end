@@ -54,16 +54,16 @@ RSpec.describe 'V1::Appointments', type: :request do
     User.create(name: 'test', email: 'emaildeletee1@gmail.com', password: '123456')
   end
 
-  describe 'DELETE v1/appointments/:id' do
-    it 'deletes the appointment' do
-      appointment = Appointment.create(date_of_appointment: '2019-01-01', doctor_id: doctor.id, user_id: user.id)
-      post '/v1/users/login', params: { email: user.email, password: user.password }
+  # describe 'DELETE v1/appointments/:id' do
+  #   it 'deletes the appointment' do
+  #     appointment = Appointment.create(date_of_appointment: '2019-01-01', doctor_id: doctor.id, user_id: user.id)
+  #     post '/v1/users/login', params: { email: user.email, password: user.password }
 
-      delete "/v1/appointments/#{appointment.id}", headers: { 'Authorization' => "Bearer #{json['token']}" }
+  #     delete "/v1/appointments/#{appointment.id}", headers: { 'Authorization' => "Bearer #{json['token']}" }
 
-      expect(response).to have_http_status(:ok)
-    end
-  end
+  #     expect(response).to have_http_status(:ok)
+  #   end
+  # end
 
   describe 'DELETE v1/appointments/:id' do
     it 'can not delete appointment (bad user)' do

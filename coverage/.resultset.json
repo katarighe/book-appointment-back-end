@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/integration/appointments_spec.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/integration/appointments_spec.rb": {
         "lines": [
           null,
           1,
@@ -116,7 +116,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/swagger_helper.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/swagger_helper.rb": {
         "lines": [
           1,
           null,
@@ -170,7 +170,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/rails_helper.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/rails_helper.rb": {
         "lines": [
           null,
           1,
@@ -248,7 +248,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/config/environment.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -257,7 +257,7 @@
           1
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/config/application.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/config/application.rb": {
         "lines": [
           1,
           null,
@@ -294,7 +294,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/config/boot.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -302,7 +302,7 @@
           1
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/config/environments/test.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -370,7 +370,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/config/initializers/cors.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/config/initializers/cors.rb": {
         "lines": [
           null,
           null,
@@ -390,7 +390,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/config/initializers/devise.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/config/initializers/devise.rb": {
         "lines": [
           null,
           null,
@@ -708,7 +708,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/config/initializers/filter_parameter_logging.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -720,7 +720,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/config/initializers/inflections.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -740,7 +740,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/config/initializers/rswag_api.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/config/initializers/rswag_api.rb": {
         "lines": [
           1,
           null,
@@ -758,7 +758,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/config/initializers/rswag_ui.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/config/initializers/rswag_ui.rb": {
         "lines": [
           1,
           null,
@@ -778,7 +778,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/factories/appointments.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/factories/appointments.rb": {
         "lines": [
           1,
           1,
@@ -789,7 +789,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/factories/doctors.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/factories/doctors.rb": {
         "lines": [
           1,
           1,
@@ -802,7 +802,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/factories/users.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/factories/users.rb": {
         "lines": [
           1,
           1,
@@ -814,7 +814,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/config/routes.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/config/routes.rb": {
         "lines": [
           1,
           1,
@@ -823,6 +823,9 @@
           1,
           1,
           1,
+          null,
+          1,
+          null,
           1,
           1,
           1,
@@ -830,14 +833,14 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/support/factory_bot.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/support/factory_bot.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/support/shoulda_matchers.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/support/shoulda_matchers.rb": {
         "lines": [
           1,
           1,
@@ -847,7 +850,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/support/request_spec_helper.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/support/request_spec_helper.rb": {
         "lines": [
           1,
           1,
@@ -895,7 +898,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/integration/doctors_spec.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/integration/doctors_spec.rb": {
         "lines": [
           null,
           1,
@@ -1035,7 +1038,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/integration/users_spec.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/integration/users_spec.rb": {
         "lines": [
           1,
           null,
@@ -1177,7 +1180,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/app/models/user.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/app/models/user.rb": {
         "lines": [
           1,
           null,
@@ -1192,21 +1195,21 @@
           null,
           1,
           1,
-          null,
+          1,
           1,
           34,
           null,
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/app/models/application_record.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/models/appointment_spec.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/models/appointment_spec.rb": {
         "lines": [
           1,
           null,
@@ -1265,7 +1268,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/app/models/appointment.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/app/models/appointment.rb": {
         "lines": [
           1,
           1,
@@ -1276,79 +1279,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/models/doctor_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          14,
-          null,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          2,
-          2,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/app/models/doctor.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          161,
-          null,
-          null
-        ]
-      },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/models/user_spec.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/models/doctor_spec.rb": {
         "lines": [
           1,
           null,
@@ -1356,32 +1287,12 @@
           14,
           null,
           1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
           null,
           null,
           1,
@@ -1420,7 +1331,109 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/requests/v1/appointments_spec.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/app/models/doctor.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          125,
+          null,
+          null
+        ]
+      },
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          13,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/requests/v1/admin_users_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/requests/v1/appointments_spec.rb": {
         "lines": [
           1,
           null,
@@ -1534,7 +1547,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/requests/v1/doctors_spec.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/requests/v1/doctors_spec.rb": {
         "lines": [
           1,
           null,
@@ -1636,7 +1649,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/spec/requests/v1/users_spec.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/spec/requests/v1/users_spec.rb": {
         "lines": [
           1,
           null,
@@ -1758,11 +1771,12 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/app/controllers/v1/users_controller.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/app/controllers/v1/users_controller.rb": {
         "lines": [
           1,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -1801,16 +1815,10 @@
           2,
           2,
           null,
-          null,
-          1,
-          null,
-          1,
-          8,
-          null,
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/lib/json_web_token.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/lib/json_web_token.rb": {
         "lines": [
           1,
           null,
@@ -1829,7 +1837,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/app/controllers/application_controller.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/app/controllers/application_controller.rb": {
         "lines": [
           null,
           1,
@@ -1863,7 +1871,21 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/app/serializers/user_serializer.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/app/controllers/concerns/authentication_concern.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          9,
+          null,
+          null
+        ]
+      },
+      "C:/microverse1/Module--6/book-appointment-back-end/app/serializers/user_serializer.rb": {
         "lines": [
           1,
           1,
@@ -1871,7 +1893,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/app/controllers/v1/appointments_controller.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/app/controllers/v1/appointments_controller.rb": {
         "lines": [
           1,
           1,
@@ -1924,7 +1946,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/app/serializers/appointment_serializer.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/app/serializers/appointment_serializer.rb": {
         "lines": [
           1,
           1,
@@ -1932,7 +1954,7 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/app/controllers/v1/doctors_controller.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/app/controllers/v1/doctors_controller.rb": {
         "lines": [
           1,
           1,
@@ -1946,7 +1968,7 @@
           1,
           null,
           3,
-          152,
+          116,
           null,
           null,
           null,
@@ -1996,16 +2018,44 @@
           null
         ]
       },
-      "/mnt/c/Users/Aden/book-appointment-back-end/book-appointment-back-end/app/serializers/doctor_serializer.rb": {
+      "C:/microverse1/Module--6/book-appointment-back-end/app/serializers/doctor_serializer.rb": {
         "lines": [
           1,
           1,
           1,
+          null,
+          null
+        ]
+      },
+      "C:/microverse1/Module--6/book-appointment-back-end/app/controllers/v1/admin_users_controller.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1701968744
+    "timestamp": 1702043808
   }
 }
