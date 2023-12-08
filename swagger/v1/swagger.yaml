@@ -483,3 +483,67 @@ securityDefinitions:
     type: apiKey
     name: Authorization
     in: header
+"/v1/admin/users/signup":
+  post:
+    summary: Create admin user
+    tags:
+    - Admin Users
+    consumes:
+    - application/json
+    parameters:
+    - name: params
+      in: body
+      schema:
+        type: object
+        properties:
+          name:
+            type: string
+          email:
+            type: string
+          password:
+            type: string
+        required:
+        - name
+        - email
+        - password
+    responses:
+      '200':
+        description: Admin user created
+        schema:
+          type: object
+          properties:
+            token:
+              type: string
+            exp:
+              type: string
+            user_details:
+              type: object
+              properties:
+                id:
+                  type: integer
+                email:
+                  type: string
+                created_at:
+                  type: string
+                updated_at:
+                  type: string
+                name:
+                  type: string
+                role:
+                  type: string
+      '403':
+        description: Bad parameters
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+            error_message:
+              type: object
+              properties:
+                email:
+                  type: array
+                password:
+                  type: array
+                name:
+                  type: array
