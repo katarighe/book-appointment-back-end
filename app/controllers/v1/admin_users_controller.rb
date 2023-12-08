@@ -1,4 +1,4 @@
- # app/controllers/v1/admin_users_controller.rb
+# app/controllers/v1/admin_users_controller.rb
 class V1::AdminUsersController < ApplicationController
   include AuthenticationConcern
   before_action :authorize_request, except: %i[login signup]
