@@ -191,7 +191,9 @@ run the test with:
 rspec spec
 ```
 
-Visit /coverage/index.html in your browser:
+Visit /coverage/index.html in your browser.
+
+![image](https://github.com/katarighe/book-appointment-back-end/assets/80690364/d0e60d0e-7ab3-4bfe-acb1-b2c06e71ae03)
 
 To open API documentation, please execute the following command:
 
