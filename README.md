@@ -193,8 +193,6 @@ rspec spec
 
 Visit /coverage/index.html in your browser:
 
-![image](https://github.com/katarighe/book-appointment-back-end/assets/80690364/5c85bba4-0863-4c4e-9cc9-658a9c2b08b3)
-
 To open API documentation, please execute the following command:
 
 ```
@@ -202,6 +200,8 @@ rails rswag:specs:swaggerize
 ```
 
 Visit http://localhost:3001/api-docs in your browser.
+
+![image](https://github.com/katarighe/book-appointment-back-end/assets/80690364/5c85bba4-0863-4c4e-9cc9-658a9c2b08b3)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
