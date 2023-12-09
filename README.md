@@ -1,39 +1,11 @@
 <a name="readme-top"></a>
 
-<!--
-!!! IMPORTANT !!!
-This README is an example of how you could professionally present your codebase. 
-Writing documentation is a crucial part of your work as a professional software developer and cannot be ignored. 
-
-You should modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
-
-For more information on the importance of a professional README for your repositories: https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/readme_best_practices.md
--->
-
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+
+  <img src="bookadoc-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Book A Doctor Appointment (Backend)</b></h3>
 
 </div>
 
@@ -45,6 +17,8 @@ For more information on the importance of a professional README for your reposit
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Frontend Version](#frontend-version)
+    - [Kanban Board](#kanban-board)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -52,40 +26,39 @@ For more information on the importance of a professional README for your reposit
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#deployment)
+  - [Visit Repo](#visit-repo)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Book A Doctor appointments (Backend) <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
+The Book A Doctor appointments (Backend) is a Rails application specifically designed for managing doctor appointments. This application utilizes API endpoints that allow users to load, create, and delete doctor information and appointments. Users must either sign up for an account or sign in to access these API endpoints.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://developer.mozilla.org/en/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript">JavaScript</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://rubyonrails.org/">Rails</a></li>
+    <li><a href="https://react.dev/">React</a></li>
   </ul>
 </details>
 
@@ -96,23 +69,47 @@ For more information on the importance of a professional README for your reposit
   </ul>
 </details>
 
+<details>
+<summary>Tests / API</summary>
+  <ul>
+    <li><a href="https://rspec.info/">Rspec</a></li>
+    <li><a href="https://github.com/rswag/rswag/">Rswag</a></li>
+  </ul>
+</details>
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+The main features of this app include:
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **Load, create, and delete doctors**
+- **Load, create and delete appointments / reservations**
+- **Signup and Signin feature**
+- **Admin and User roles**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Fronend Version -->
+
+### Frontend Version <a name="frontend-version"></a>
+
+- [Book a Doctor Appointments Frontend](https://github.com/katarighe/book-appointment-front-end)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Kanban Board -->
+
+### Kanban Board <a name="kanban-board"></a>
+
+- [Original Kanban Board](https://github.com/katarighe/book-appointment-back-end/projects/1)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
 
 - [Live Demo Link](https://google.com)
 
@@ -122,83 +119,94 @@ For more information on the importance of a professional README for your reposit
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run this project you need to install the following items:
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+- Ruby
+- Ruby on Rails
+- PostgresSQL
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
 ```
---->
+git clone git@github.com:katarighe/book-appointment-back-end.git
+cd book-appointment-back-end
+```
 
 ### Install
 
-Install this project with:
+Install this project by using:
 
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
 ```
---->
+bundle install
+```
+
+Setup database with:
+
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project, execute the following command to start the server:
 
-<!--
-Example command:
-
-```sh
-  rails server
 ```
---->
+rails server -p 3001
+```
+
+Visit http://localhost:3001/ in your browser.
 
 ### Run tests
 
-To run tests, run the following command:
+To run tests, run the following commands:
 
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
+Install npm with:
 
 ```
- -->
+npm install
+```
+
+Install rspec with:
+
+```
+bundle install
+```
+
+and
+
+```
+rails generate rspec:install
+```
+
+run the test with:
+
+```
+rspec spec
+```
+
+Visit /coverage/index.html in your browser:
+
+
+
+To open API documentation, please execute the following command:
+
+```
+rails rswag:specs:swaggerize
+```
+
+Visit http://localhost:3001/api-docs in your browser.
+
+### Visit And Open Files <a name="visit-repo"></a>
+
+- [Visit Main Backend Repo](https://github.com/katarighe/book-appointment-back-end)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,19 +214,32 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Mohamed Aden Ighe**
 
-👤 **Author1**
+- GitHub: [@katarighe](https://github.com/katarighe)
+- Twitter: [@katarighe](https://twitter.com/katarighe)
+- LinkedIn: [@mighe](https://linkedin.com/in/mighe)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤: **Antoine Makdessy**
 
-👤 **Author2**
+- GitHub: [@ANTOINE1128](https://github.com/ANTOINE1128)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/antoine-makdessy/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Andry Narson**
+
+- GitHub: [@rbd3](https://github.com/rbd3)
+- LinkedIn: [@Andry Narson Rabedesana](https://linkedin.com/in/andry-rabedesana)
+
+👤 **Sodeeq Awoyemi**
+
+- GitHub: [@githubhandle](https://github.com/Errytagedesign)
+- Twitter: [@twitterhandle](https://twitter.com/errytage)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/errytagedesigns/)
+
+👤 **Clarence Atim**
+
+- GitHub: [@ClarenceAtim](https://github.com/ClarenceAtim)
+- LinkedIn: [@Clarence Atim](ttps://www.linkedin.com/in/tegum-clarence-atim/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -226,11 +247,26 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+Here are some future features that could be added to the Book a Doctor appointments app in the future.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- **Medication management**
+- **Personalized healthcare plans**
+- **Symptom checker**
+- **Multilingual support**
+- **Electronic health records (EHR)**
+- **Clinical decision support**
+- **Performance analytics**
+- **Appointment reminders**
+- **Wait time estimates**
+- **Social features**
+- **Patient communication**
+- **Medical record access**
+
+These are just a few potential future features for the "Book a Doctor" appointments app. The specific features that are implemented will depend on the needs and preferences of the users, as well as the available resources and technology.
+
+It is also important to consider the ethical implications of adding new features, such as the potential for bias in AI-powered tools and the need to protect patient privacy and security.
+
+Ultimately, the goal of any new feature should be to improve the user experience and make it easier for patients and doctors to access and manage healthcare.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -248,9 +284,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+Give a star⭐️ or a thumbs up 👍 if you like this project! You can visit my GitHub profile for more of my projects.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -258,25 +292,10 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
+- Project supervised by [Microverse](https://www.microverse.org/)
+- [Creative Commons 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/)
+- Original design theme is by [Murat Korkmaz on Behance](https://www.behance.net/muratk)
+- [Link to the original design theme](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign/modules/173005579) by Murat Korkmaz
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -285,7 +304,5 @@ I would like to thank...
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
