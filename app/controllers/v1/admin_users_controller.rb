@@ -5,6 +5,7 @@ class V1::AdminUsersController < ApplicationController
 
   def signup
     @admin_user = User.new(signup_params.merge(role: 'admin'))
+    @admin_user.image_url ||= 'https://thumbs.dreamstime.com/z/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg'
     if @admin_user.save
       token = JsonWebToken.encode(user_id: @admin_user.id)
       time = Time.now + 24.hours.to_f

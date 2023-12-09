@@ -25,6 +25,7 @@ class V1::UsersController < ApplicationController
 
   def signup
     @user = User.new(signup_params)
+    @user.image_url ||= 'https://thumbs.dreamstime.com/z/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg'
     if @user.save
       token = JsonWebToken.encode(user_id: @user.id)
       time = Time.now + 24.hours.to_f

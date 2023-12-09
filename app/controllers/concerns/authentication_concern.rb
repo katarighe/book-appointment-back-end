@@ -5,6 +5,6 @@ module AuthenticationConcern
   private
 
   def signup_params
-    params.permit(:name, :email, :password, :password_confirmation)
+    params.permit(:name, :email, :password, :password_confirmation, :image, :image_url, :role)
   end
 end
