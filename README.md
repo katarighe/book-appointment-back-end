@@ -26,7 +26,6 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Visit Repo](#visit-repo)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -95,7 +94,7 @@ The main features of this app include:
 
 ### Frontend Version <a name="frontend-version"></a>
 
-- [Book a Doctor Appointments Frontend](https://github.com/katarighe/book-appointment-front-end)
+- [Frontend version](https://github.com/katarighe/book-appointment-front-end)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +102,7 @@ The main features of this app include:
 
 ### Kanban Board <a name="kanban-board"></a>
 
-- [Original Kanban Board](https://github.com/katarighe/book-appointment-back-end/projects/1)
+- [Original Kanban Board](https://github.com/users/katarighe/projects/4/views/1)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -127,7 +126,7 @@ In order to run this project you need to install the following items:
 
 - Ruby
 - Ruby on Rails
-- PostgresSQL
+- PostgreSQL
 
 ### Setup
 
@@ -194,8 +193,6 @@ rspec spec
 
 Visit /coverage/index.html in your browser:
 
-
-
 To open API documentation, please execute the following command:
 
 ```
@@ -203,10 +200,6 @@ rails rswag:specs:swaggerize
 ```
 
 Visit http://localhost:3001/api-docs in your browser.
-
-### Visit And Open Files <a name="visit-repo"></a>
-
-- [Visit Main Backend Repo](https://github.com/katarighe/book-appointment-back-end)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
