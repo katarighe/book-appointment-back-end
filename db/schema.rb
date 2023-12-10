@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_09_101746) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_10_045753) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -65,6 +65,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_09_101746) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url", default: "https://shutterstock.7eer.net/c/38919/1636620/1305?trafcat=T3&trafsrc=Direct&u=https://www.shutterstock.com/image-photo/1933069292&sharedid=www.vecteezy.com&subId1=search-top-show_page_similar_button-test&subId2=6895137c-9d42-41ec-9433-40bc9f230c32&adtype=vector&adplacement=SRP&subId3=female-doctor_1933069292_top"
   end
 
   create_table "users", force: :cascade do |t|
