@@ -1,5 +1,5 @@
 class V1::AppointmentsController < ApplicationController
-  # before_action :authorize_request, only: %i[index create]
+   before_action :authorize_request, only: %i[index create]
 
   def index
     @response = []
