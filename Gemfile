@@ -54,8 +54,8 @@ gem 'sassc-rails'
 # gem "image_processing", "~> 1.2"
 
 # Allows pagination
-gem 'will_paginate'
 gem 'rack-cors'
+gem 'will_paginate'
 # For authentication
 gem 'devise'
 
