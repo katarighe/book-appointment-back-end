@@ -55,7 +55,7 @@ gem 'sassc-rails'
 
 # Allows pagination
 gem 'will_paginate'
-
+gem 'rack-cors'
 # For authentication
 gem 'devise'
 
