@@ -5,9 +5,7 @@ Rails.application.routes.draw do
   namespace :v1 do
     post 'users/login' => 'users#login'
     post 'users/signup' => 'users#signup'
-  
     post 'admin/users/signup' => 'admin_users#signup'
-  
     get 'users/fetch_current_user' => 'users#fetch_current_user'
     resources :doctors, only: [:create, :destroy, :show, :index]
     resources :appointments, only: [:create, :show, :index]
