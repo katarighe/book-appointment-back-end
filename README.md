@@ -236,7 +236,7 @@ Visit http://localhost:3001/api-docs in your browser.
 👤 **Clarence Atim**
 
 - GitHub: [@ClarenceAtim](https://github.com/ClarenceAtim)
-- LinkedIn: [@Clarence Atim](ttps://www.linkedin.com/in/tegum-clarence-atim/)
+- LinkedIn: [@Clarence Atim](https://www.linkedin.com/in/tegum-clarence-atim/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
